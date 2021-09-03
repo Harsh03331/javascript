@@ -1,0 +1,21 @@
+doctype html
+html
+   head
+      title Students
+   body
+      table(border="2" cellpadding="10") 
+        thead 
+            th FullName
+            
+            th Email
+                
+            th Mobile
+                
+        if allstudents.length!=0
+            each val in allstudents
+                tr 
+                    td #{val.fullname}
+                    td #{val.email}
+                    td #{val.mobile}
+        else
+            h1 no students available

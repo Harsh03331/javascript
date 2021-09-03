@@ -1,0 +1,20 @@
+doctype html
+html
+   head
+      title Employees
+   body
+      table(border="2" cellpadding="10") 
+        thead 
+            th FullName
+                
+            th Email
+                
+            th Mobile
+        if allemployees.length!=0    
+            each val in allemployees
+                tr 
+                    td #{val.fullname}
+                    td #{val.industry}
+                    td #{val.profession}
+        else
+            h1 no employee available
