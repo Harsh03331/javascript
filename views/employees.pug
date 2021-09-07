@@ -5,7 +5,7 @@ html
    body
       table(border="2" cellpadding="10") 
         thead 
-            th FullName
+            th FullName 
                 
             th Email
                 
@@ -13,8 +13,9 @@ html
         if allemployees.length!=0    
             each val in allemployees
                 tr 
-                    td #{val.fullname}
-                    td #{val.industry}
-                    td #{val.profession}
+                    td 
+                        a(href=`/employees/details/${val.mobile}`) #{val.fullname}
+                    td #{val.email}
+                    td #{val.mobile}
         else
             h1 no employee available

@@ -14,7 +14,8 @@ html
         if allstudents.length!=0
             each val in allstudents
                 tr 
-                    td #{val.fullname}
+                    td 
+                        a(href=`/students/details/${val.mobile}`) #{val.fullname}
                     td #{val.email}
                     td #{val.mobile}
         else
